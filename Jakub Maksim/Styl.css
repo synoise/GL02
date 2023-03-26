@@ -1,0 +1,38 @@
+.styl{
+  background-color: rgba(221, 221, 189, 0.685);
+  font-size:medium;
+  font-family:Verdana, Tahoma, sans-serif;
+  text-align:center;
+  display: flex;
+  justify-content:center;
+  font-style:italic;
+}
+.podzial{
+  display:grid;
+  grid-template-columns: repeat(3, 33.3%);
+  border: 3px;
+  border-style: solid;
+}
+.x{
+  text-align: center;
+  }
+
+.y{
+  text-align: left;
+  font-family:'Courier New', Courier, monospace;
+  background-color: blueviolet;
+}
+.o{ 
+  display:grid;
+  grid-template-columns: repeat(3, 33.3%);
+}
+.u{
+  border: 5px;
+  border-style: solid;
+  background: rgb(2,0,36);
+background: linear-gradient(308deg, rgba(2,0,36,1) 0%, rgba(73,185,202,0.8925945378151261) 0%, rgba(135,91,117,1) 22%, rgba(100,118,183,1) 31%, rgba(105,105,179,1) 37%, rgba(114,101,161,1) 45%, rgba(68,182,105,0.4640231092436975) 74%, rgba(156,82,75,1) 98%, rgba(147,86,93,1) 100%);
+  text-align: center;
+}
+body{
+  background-color: antiquewhite;
+}
