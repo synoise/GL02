@@ -1,0 +1,38 @@
+
+
+body {
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 30px;
+}
+h1{
+background-color: cadetblue;
+text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+h4{
+    background-color: darkkhaki;
+}
+
+form{
+    font-size: 20;
+    text-align: center;
+    
+}
+
+img
+{
+    background-color:dimgrey;
+    padding: 20px;
+}
+
+table
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
