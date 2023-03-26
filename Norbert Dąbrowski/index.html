@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-image: url(https://static.deon.pl/storage/image/core_files/2012/4/15/f03bbb0bf39cfbe65adcda52ff8dfe64/jpg/deon/articles-thumb-xlarge-breakpoint-default/slynny-czeski-krecik-sie-globalizuje.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        *{
+            color: aliceblue;
+            text-shadow: 5px 5px 15px black;
+            margin: 0px;
+        }
+        img{
+            width: 100%;
+        }
+        .title-b{
+            font-size: 32px;
+        }
+        .main{
+            background-color: rgb(22, 255, 243);
+        }
+        .lower{
+            height: 500px;
+            width: 30%;
+            background-color:rgb(22, 255, 243) ;
+        }
+        .lower>span{
+            font-size: 50px;
+            color: blueviolet;
+        }
+        .formularzysko{
+          width: 100%;
+          height: 100vh;
+          background-color: rgb(18,18,18);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .formularzysko>span{
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 60px;
+        }
+        .formularzysko>p{
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 25px;
+          margin: 0px 30%;
+        }
+        form{
+          display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    justify-content: space-evenly;
+    
+        }
+        input{
+          background-color: rgb(8,7,8);
+          width: 70%;
+          border: none;
+          height: 30px;
+        }
+        textarea{
+          background-color: rgb(8,7,8);
+          height: 100px;
+                    width: 70%;
+        }
+::-webkit-scrollbar{
+    width: 4px;
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 45rem;
+    background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 255, 255, 0);
+}
+    </style>
+</head>
+<body class="bg">
+    <div class="main">
+        <h1>Witaj na stronie!</h1>  <h6> Dzień dobry!!</h6>
+
+        <b>co ja robie tu </b>
+        
+        <i>uuuuuuu co ty tutaj robisz </i>
+        
+        <span style="font-size: 21px"> Witam    </span>
+        
+        <span style="color: red"> wszystkich     </span>
+        <span>reprezentacja polski</span>
+        <ul>
+            <li>Robert R. bo rodo</li>    
+            <li>Wojciech Sz. bo rodo</li>    
+        </ul>
+        Ulubione piosenki
+        <ol>
+            <li>Kanye West - Goodmorning</li>    
+            <li>Yugopolis - Ostatnia doba</li>    
+        </ol>
+        <span class="title-b">Jeszcze Posla nie zginęła!</span>
+    </div>
+<img src="https://bi.im-g.pl/im/1f/e3/1b/z29242655Q,Reprezentacja-Polski-podczas-mundialu-w-Katarze--m.jpg">
+<aside >
+    <div class="lower">
+        <span>Chciały by polacky robacky</span>
+    </div>
+    <table border="1">
+       <tr>
+          <td>przedmiot</td> <td>ocena</td> 
+       </tr>
+       <tr>
+          <td>programowanie</td> <td>6</td> 
+       </tr>
+       <tr>
+          <td>matematyka </td> <td>2</td> 
+       </tr>
+    </table>
+    <table border="1" style="width: 100px; height: 200px">
+       <tr>
+          <td></td> <td rowspan="2"></td> <td></td>
+       </tr>
+       <tr>
+          <td></td>  <td> </td>
+       </tr>
+       <tr>
+          <td></td> <td colspan="2"></td> 
+       </tr>
+     <tr>
+          <td></td> <td colspan="2"></td> 
+       </tr>
+     <tr>
+          <td colspan="2"></td>  <td></td>
+       </tr>
+    </table>
+ </aside>
+ <div class="formularzysko">
+    <span>Formularz do Santosa</span>
+    <p>Nasza piękna Polska kadra ostatnimi czasy nie spisuje się za dobrze... Czekamy na Twój pomysł jak zmienić naszą reprezentację na lepszą.</p>
+    <form action="" method="get">
+        <input type="text" name="imie" placeholder="imie">
+        <input type="text" name="nazwisko" placeholder="nazwisko">
+        <textarea name="nazwisko" placeholder="wiadomośc"></textarea>
+        <input type="button" value="prześlij">
+    </form>
+ </div>
+ <!-- <script>
+  wiek = queueSelector('.');
+  ( wiek  18 ){
+     write("Treść dostępna wyłącznie dla pełnoletnich!");
+  }
+  <script> -->
+</body>
+</html>
