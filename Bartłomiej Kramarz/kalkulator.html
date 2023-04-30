@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 4px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            vertical-align: middle;
+            
+        }
+        .item > span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 2em; /* Set line height back to normal */
+}
+    </style>
+</head>
+<body>
+    <input type="text" id="wartosc">
+    <div id="tabliczka">
+    </div>
+    <button class="item" onclick="dzialanie('+')">+</button>
+    <button class="item" onclick="setNumber(0)">0</button>
+    <button class="item" onclick="dzialanie('-')">-</button>
+    <button class="item" onclick="oblicz()">=</button>
+
+    
+    <script>
+        let znak = "";
+        function setNumber(a){
+            if(znak === 0){
+                document.getElementById('wartosc').value = " ";
+                znak = " ";
+            }
+
+            displayUpdate(a);
+        }
+         let tabliczka = "";
+            const table = (rows, cols) => {
+                for (let i = 1; i <= rows; i++) {
+                    let row = "";
+                    for (let j = 1; j <= cols; j++) {
+                        
+                        row += "<button class='item' onclick='setNumber("+(i*j)+")'><span>"+(i*j)+"</span></button>";
+                        
+                    }
+                    console.log(row);
+                    tabliczka += row + "</br>";
+                }
+                
+            }
+
+            table(3, 3);
+            document.getElementById("tabliczka").innerHTML= tabliczka;
+
+            function dzialanie(a){
+                // switch(a) {
+                //     case '+':
+                        
+                //         break;
+                //     case '-':
+                        
+                //         break;
+                //     }
+                    znak = a;
+                    displayUpdate(a);
+            }
+            function displayUpdate(b){
+                document.getElementById("wartosc").value += b;
+            }
+
+            function oblicz(){
+                let temp = 0;
+                let wynik = document.getElementById("wartosc").value;
+                let tempArray = wynik.split(znak);
+                tempArray.forEach(element => {
+                    console.log(element,znak);
+                    switch(znak) {
+                    case '+':
+                        temp+=Number(element);
+                        break;
+                    case '-':
+                        temp-=Number(element);
+                        break;
+                    }
+}
+                );
+                document.getElementById("wartosc").value = temp;
+                znak = 0; 
+                console.log(tempArray,temp)
+
+            }
+            
+
+            
+    </script>
+</body>
+</html>
