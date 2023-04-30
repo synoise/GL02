@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .item {
+            background-color: red;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 4px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            vertical-align: middle;
+            
+        }
+        .item > span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 2em; /* Set line height back to normal */
+}
+    </style>
 </head>
 <body>
+    <div id="tabliczka">
+
+    </div>
     <script>
         // Stwórz tablicę, która zawiera dziesięć liczb całkowitych, liczby niech zostaną wpisane przez użytkownika z konsoli, wyświetl te wartości na ekranie. Następnie poproś użytkownika o podanie liczby całkowitej. Przeszukaj tablicę i policz, ile razy element został znaleziony.
         // let tab = [];
@@ -27,10 +49,39 @@
         // }
 
         //cos nie dziala do poprawy
-            //dd
-        
-        
+            
 
+            
+            
+            // Napisz program który zawiera funkcję wypełniającą tablicę liczbami losowymi. 
+            // W widoku HTML wypisz te liczby. 
+            // const fill = (size) => {
+            //     let wynik;
+            //     tab = [];
+            //     for(let i=0;i<size;i++){
+            //         tab.push(Math.round(Math.random()*10));
+            //     }
+            //      console.log(tab);
+            // }
+            // console.log(fill(5));
+        
+            // Napisz program wypisujący tabliczkę mnożenia w częśći HTML.
+            let tabliczka = "";
+            const table = (rows, cols) => {
+                for (let i = 1; i <= rows; i++) {
+                    let row = "";
+                    for (let j = 1; j <= cols; j++) {
+                        
+                        row += "<div class='item'><span>"+(i*j)+"</span></div>";
+                        
+                    }
+                    console.log(row);
+                    tabliczka += row + "</br>";
+                }
+            }
+
+            table(10, 10);
+            document.getElementById("tabliczka").innerHTML= tabliczka;
     </script>
     
 </body>
