@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie z tablicą</title>
+</head>
+<body>
+<label for="liczby">Podaj 10 liczb całkowitych, oddzielając je przecinkami:</label>
+<br>
+<input type="text" id="liczby">
+<br>
+<button onclick="przetworz()">Przetwórz</button>
+<br>
+<br>
+<label for="liczba_szukana">Podaj liczbę całkowitą, której wystąpienia chcesz policzyć:</label>
+<br>
+<input type="text" id="liczba_szukana">
+<br>
+<button onclick="szukaj()">Szukaj</button>
+<br>
+<br>
+<div id="wynik"></div>
+
+<script>
+    function przetworz() {
+        let tablica = document.getElementById("liczby").value.split(",").map(Number);
+        let wynik = "Tablica zawiera następujące wartości:<br>";
+        for (let i = 0; i < 10; i++) {
+            wynik += tablica[i] + "<br>";
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    }
+
+    function szukaj() {
+        let tablica = document.getElementById("liczby").value.split(",").map(Number);
+        let liczbaSzukana = parseInt(document.getElementById("liczba_szukana").value);
+        let liczbaWystapien = 0;
+        for (let i = 0; i < 10; i++) {
+            if (tablica[i] === liczbaSzukana) {
+                liczbaWystapien++;
+            }
+        }
+        let wynik = `Liczba ${liczbaSzukana} występuje w tablicy ${liczbaWystapien} razy.`;
+        document.getElementById("wynik").innerHTML = wynik;
+    }
+</script>
+</body>
+</html>
