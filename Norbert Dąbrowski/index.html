@@ -6,83 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .bg{
-            background-image: url(https://static.deon.pl/storage/image/core_files/2012/4/15/f03bbb0bf39cfbe65adcda52ff8dfe64/jpg/deon/articles-thumb-xlarge-breakpoint-default/slynny-czeski-krecik-sie-globalizuje.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        *{
-            color: aliceblue;
-            text-shadow: 5px 5px 15px black;
-            margin: 0px;
-        }
-        img{
-            width: 100%;
-        }
-        .title-b{
-            font-size: 32px;
-        }
-        .main{
-            background-color: rgb(22, 255, 243);
-        }
-        .lower{
-            height: 500px;
-            width: 30%;
-            background-color:rgb(22, 255, 243) ;
-        }
-        .lower>span{
-            font-size: 50px;
-            color: blueviolet;
-        }
-        .formularzysko{
-          width: 100%;
-          height: 100vh;
-          background-color: rgb(18,18,18);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        }
-        .formularzysko>span{
-          font-family: 'Courier New', Courier, monospace;
-          font-size: 60px;
-        }
-        .formularzysko>p{
-          font-family: 'Courier New', Courier, monospace;
-          font-size: 25px;
-          margin: 0px 30%;
-        }
-        form{
-          display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 400px;
-    justify-content: space-evenly;
-    
-        }
-        input{
-          background-color: rgb(8,7,8);
-          width: 70%;
-          border: none;
-          height: 30px;
-        }
-        textarea{
-          background-color: rgb(8,7,8);
-          height: 100px;
-                    width: 70%;
-        }
-::-webkit-scrollbar{
-    width: 4px;
-    background: none;
-}
-::-webkit-scrollbar-thumb{
-    border-radius: 45rem;
-    background-color: rgb(0, 0, 0);
-}
-::-webkit-scrollbar-track{
-    background-color: rgba(0, 255, 255, 0);
+       .bg{
+    background-image: url(https://static.deon.pl/storage/image/core_files/2012/4/15/f03bbb0bf39cfbe65adcda52ff8dfe64/jpg/deon/articles-thumb-xlarge-breakpoint-default/slynny-czeski-krecik-sie-globalizuje.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
     </style>
 </head>
@@ -153,11 +82,57 @@
         <input type="button" value="prześlij">
     </form>
  </div>
- <!-- <script>
-  wiek = queueSelector('.');
-  ( wiek  18 ){
-     write("Treść dostępna wyłącznie dla pełnoletnich!");
-  }
-  <script> -->
+ <table>
+
+ </table>
+ <script>
+// Stwórz tablicę, która zawiera dziesięć liczb całkowitych, liczby niech zostaną wpisane przez użytkownika z konsoli, wyświetl te wartości na ekranie. Następnie poproś użytkownika o podanie liczby całkowitej. Przeszukaj tablicę i policz, ile razy element został znaleziony.
+// let tab = [];
+// let userAdd = prompt("Podaj 10 liczb");
+// let tabSplit = userAdd.split('')
+// if(tabSplit.length === 10){
+// console.log(tabSplit)
+// } else {
+// alert("Podaj 10 liczb")
+// }
+
+//     let userSearch = prompt("Podaj liczbe całkowitą");
+
+//     if(tabSplit.indexOf(userSearch !== -1)){
+//         console.log(" występuje w tablicy pod indexem", tab.indexOf(tabSplit));
+//     } else {
+//         alert("nie wystepuje")
+//     }
+     const $names =['Ryszard', 'Marisuz', 'Michał', 'Marek']
+     const $surnames = ['Wojnar', 'Kramarz', 'Kowalski', 'Drążek']
+     const $val = $names.length
+     const database=[];
+
+    function User(name,surname,phone,age) {
+        this.name = name,
+        this.surname = surname
+        this.phone = phone
+        this.age = age
+    }
+    const fill = () =>{
+        for(i=0; i<=20;i++){
+            database.push(new User(
+                $names[Math.floor(Math.random() * $val)], 
+                $surnames[Math.floor(Math.random() * $val)], 
+                Math.floor(Math.random() * 8000000) + 5000000, 
+                Math.floor(Math.random() * 80) + 18))
+        }
+    }
+    fill()
+    console.log(database)
+    const draw = (a) =>{
+        const tab = document.querySelector("body > table")
+        const el = document.createElement('tr')
+        el.classList.add('table-el');
+        tab.appendChild(el)
+        
+    }
+    draw()
+  </script>
 </body>
 </html>
