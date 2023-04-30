@@ -16,7 +16,7 @@
     </style>
 </head>
 <body class="bg">
-    <div class="main">
+    <!-- <div class="main">
         <h1>Witaj na stronie!</h1>  <h6> Dzień dobry!!</h6>
 
         <b>co ja robie tu </b>
@@ -81,8 +81,9 @@
         <textarea name="nazwisko" placeholder="wiadomośc"></textarea>
         <input type="button" value="prześlij">
     </form>
- </div>
- <table>
+ </div> -->
+ <h1>Zadanie 3</h1>
+ <table style="height: 100vh; background-color: aqua;">
 
  </table>
  <script>
@@ -115,7 +116,7 @@
         this.age = age
     }
     const fill = () =>{
-        for(i=0; i<=20;i++){
+        for(i=0; i<=19;i++){
             database.push(new User(
                 $names[Math.floor(Math.random() * $val)], 
                 $surnames[Math.floor(Math.random() * $val)], 
@@ -126,13 +127,26 @@
     fill()
     console.log(database)
     const draw = (a) =>{
-        const tab = document.querySelector("body > table")
-        const el = document.createElement('tr')
-        el.classList.add('table-el');
-        tab.appendChild(el)
-        
+        a.map((user, i)=>{
+            const tab = document.querySelector("body > table")
+            const el = document.createElement('tr')
+            el.classList.add('table-el');
+            tab.appendChild(el)
+            const el2 = document.createElement('td')
+            el.appendChild(el2)
+            el2.textContent = a[i].name
+            const el3 = document.createElement('td')
+            el.appendChild(el3)
+            el3.textContent = a[i].surname
+            const el4 = document.createElement('td')
+            el.appendChild(el4)
+            el4.textContent = a[i].phone
+            const el5 = document.createElement('td')
+            el.appendChild(el5)
+            el5.textContent = a[i].age
+        })      
     }
-    draw()
+    draw(database)
   </script>
 </body>
 </html>
