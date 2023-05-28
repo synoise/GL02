@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Losowe liczby w tablicy</title>
+</head>
+<body>
+<script>
+    function losowaLiczba() {
+        return Math.floor(Math.random() * 100) + 1;
+    }
+    var dlugoscTablicy = 10;
+    var tablica = new Array(dlugoscTablicy);
+    for (var i = 0; i < dlugoscTablicy; i++) {
+        tablica[i] = losowaLiczba();
+    }
+    var lista = document.createElement("ul");
+    for (var i = 0; i < dlugoscTablicy; i++) {
+        var element = document.createElement("li");
+        element.appendChild(document.createTextNode(tablica[i]));
+        lista.appendChild(element);
+    }
+    document.body.appendChild(lista);
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tablica z przesunięciem</title>
+</head>
+<body>
+<script>
+  var tablica = [1, 2, 3, 4, 5, 6];
+  var liczba = prompt("Podaj liczbę całkowitą:");
+  var indeks = prompt("Podaj indeks dla liczby:");
+  for (var i = tablica.length - 1; i > indeks; i--) {
+    tablica[i] = tablica[i - 1];
+  }
+  tablica[indeks] = parseInt(liczba);
+  document.write(tablica);
+</script>
+</body>
+</html>
