@@ -1,0 +1,43 @@
+<html lang="pl">
+    <body>
+        <!-- Stwórz prosty kalkulator, który zawiera funkcję: dodawania, odejmowania, mnożenia dzielenia i potęgowania. Następnie przy pomocy HTML stwórz frontend do jego obsługi. -->
+        <h1>Zadanie 2</h1>
+        <script type="text/javascript">
+            function add(a, b) {
+                return a + b;
+            }
+            function sub(a, b) {
+                return a - b;
+            }
+            function mul(a, b) {
+                return a * b;
+            }
+            function div(a, b) {
+                return a / b;
+            }
+            function pow(a, b) {
+                return Math.pow(a, b);
+            }
+            function calc(a, b, op) {
+                switch (op) {
+                    case '+':
+                        return add(a, b);
+                    case '-':
+                        return sub(a, b);
+                    case '*':
+                        return mul(a, b);
+                    case '/':
+                        return div(a, b);
+                    case '^':
+                        return pow(a, b);
+                    default:
+                        return 'Nieznana operacja';
+                }
+            }
+            var a = parseInt(prompt("Podaj pierwszą liczbę"));
+            var b = parseInt(prompt("Podaj drugą liczbę"));
+            var op = prompt("Podaj operację");
+            document.write(calc(a, b, op));
+        </script>
+    </body>
+</html>

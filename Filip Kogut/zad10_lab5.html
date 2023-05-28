@@ -1,0 +1,82 @@
+<html lang="pl">
+    <body>
+    
+        <h1>Zadanie 10</h1>
+        <div id="formularzyk"></div>
+        <div id="listaKontaktow"></div>
+        <script>
+            
+            class Kontakt {
+                constructor(imie, nazwisko, numerTelefonu) {
+                    this.imie = imie;
+                    this.nazwisko = nazwisko;
+                    this.numerTelefonu = numerTelefonu;
+                }
+
+                toString() {
+                    return "[" + this.imie + "," + this.nazwisko + "," + this.numerTelefonu + "]";
+                }
+            }
+            
+            class ListaKontaktow {
+                constructor() {
+                    this.listaKontaktow = [];
+                }
+                DodajKontakt(kontakt) {
+                    this.listaKontaktow.push(kontakt);
+                }
+
+                toString() {
+                    var result = "[";
+                    this.listaKontaktow.forEach(element => {
+                        result += element.toString() + ",";
+                    });
+                    result += "]";
+                    return result;
+                }
+            }
+
+            var listaKontaktow = new ListaKontaktow();
+            var formularz = document.getElementById("formularzyk");
+
+            formularz.appendChild(document.createTextNode("Imię: "));
+            var inputName = document.createElement("input");
+            inputName.setAttribute("type", "text");
+            inputName.setAttribute("name", "imie");
+            formularz.appendChild(inputName);
+            
+            formularz.appendChild(document.createElement("br"));
+
+            formularz.appendChild(document.createTextNode("Nazwisko: "));
+            var inputSurname = document.createElement("input");
+            inputSurname.setAttribute("type", "text");
+            formularz.appendChild(inputSurname);
+            
+            formularz.appendChild(document.createElement("br"));
+
+            formularz.appendChild(document.createTextNode("Numer telefonu: "));
+            var inputPhone = document.createElement("input");
+            inputPhone.setAttribute("type", "int");
+            formularz.appendChild(inputPhone);
+
+            formularz.appendChild(document.createElement("br"));
+
+            var button = document.createElement("button");
+            button.setAttribute("type", "button");
+            button.innerHTML = "Dodaj kontakt";
+            
+
+            button.onclick = function() {
+                var imie = inputName.value;
+                var nazwisko = inputSurname.value;
+                var numerTelefonu = inputPhone.value;
+                var kontakt = new Kontakt(imie, nazwisko, numerTelefonu);
+                listaKontaktow.DodajKontakt(kontakt);
+                document.getElementById("listaKontaktow").innerHTML = listaKontaktow.listaKontaktow.toString();
+            }
+            
+            formularz.appendChild(button);
+        </script>
+
+    </body>
+</html>

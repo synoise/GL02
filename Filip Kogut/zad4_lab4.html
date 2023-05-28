@@ -1,0 +1,71 @@
+<html lang="pl">
+    <body>
+    
+        <h1>Zadanie 4</h1>
+        <script>     
+            var data = {
+                100: {
+                    "name": "Jan",
+                    "surname": "Kowalski",
+                    "money": 1000,
+                    "pin": 1234
+                },
+                101: {
+                    "name": "Adam",
+                    "surname": "Nowak",
+                    "money": 2000,
+                    "pin": 4321
+                },
+                102: {
+                    "name": "Krzysiek",
+                    "surname": "Kowal",
+                    "money": 3000,
+                    "pin": 1111
+                },
+                103: {
+                    "name": "Zbyszek",
+                    "surname": "Kowalewski",
+                    "money": 4000,
+                    "pin": 2222
+                },
+            };
+
+            var name = prompt("Podaj imię");
+            var surname = prompt("Podaj nazwisko");
+            var pin = parseInt(prompt("Podaj pin"));
+
+            var logged_user = null;
+            for (var key in data) {
+                var obj = data[key];
+                if (obj.name === name && obj.surname === surname && obj.pin === pin) {
+                    logged_user = obj;
+                    break;
+                }
+            }
+
+            if (logged_user == null) {
+                document.write("Niepoprawne dane");
+            } else {
+                document.write("Witaj " + logged_user.name + " " + logged_user.surname + "!<br>Masz " + logged_user.money + " zł<br><br>");
+                var choice = prompt("Wybierz:\n1. Wypłata\n2. Wpłata");
+                if (choice == 1) {
+                    var amount = prompt("Podaj kwotę");
+                    if (amount > logged_user.money) {
+                        document.write("Nie masz tyle pieniędzy");
+                    } else {
+                        logged_user.money -= amount;
+                        document.write("Wypłacono " + amount + " zł");
+                    }
+                } else if (choice == 2) {
+                    var amount = prompt("Podaj kwotę");
+                    logged_user.money += amount;
+                    document.write("Wpłacono " + amount + " zł");
+                } else {
+                    document.write("Niepoprawny wybór");
+                }
+            }
+
+            console.log(data);
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,21 @@
+<html lang="pl">
+    <body>
+    
+        <h1>Zadanie 7</h1>
+        <script>
+            var tab = [];
+            for (var i = 0; i < 10; i++) {
+                tab[i] = parseInt(prompt("Podaj liczbę całkowitą"));
+            }
+            document.write(tab);
+            var number = parseInt(prompt("Podaj liczbę całkowitą do wyszukania"));
+            var count = 0;
+            for (var i = 0; i < 10; i++) {
+                if (tab[i] === number) {
+                    count++;
+                }
+            }
+            document.write("<br> Liczba wystąpień liczby " + number + " wynosi: " + count);
+        </script>
+    </body> 
+</html>

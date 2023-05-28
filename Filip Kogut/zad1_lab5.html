@@ -1,0 +1,139 @@
+<html lang="pl">
+    <body>
+    
+        <h1>Laboratorium 5</h1>
+        <script>     
+           
+            class Person {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+                greet() {
+                    return "Hi, my name is " + this.name + " and I am " + this.age + " years old.";
+                }
+            }
+
+            class Rectangle {
+                constructor(width, height) {
+                    this.width = width;
+                    this.height = height;
+                }
+                getArea() {
+                    return this.width * this.height;
+                }
+                getPerimeter() {
+                    return 2 * this.width + 2 * this.height;
+                }
+            }
+            
+            class Animal {
+                constructor(name) {
+                    this.name = name;
+                }
+                speak() {
+                    return "The " + this.name + " makes a noise.";
+                }
+            }
+
+            
+            class BankAccount {
+                constructor(balance) {
+                    this.balance = balance;
+                }
+                deposit(amount) {
+                    this.balance += amount;
+                }
+                withdraw(amount) {
+                    this.balance -= amount;
+                }
+                getBalance() {
+                    return this.balance;
+                }
+            }
+
+            
+            class Book {
+                constructor(title, author, year) {
+                    this.title = title;
+                    this.author = author;
+                    this.year = year;
+                }
+                getTitle() {
+                    return this.title;
+                }
+                getAuthor() {
+                    return this.author;
+                }
+                getAge() {
+                    return new Date().getFullYear() - this.year;
+                }
+            }
+
+            class Circle {
+                constructor(radius) {
+                    this.radius = radius;
+                }
+                getArea() {
+                    return Math.PI * this.radius * this.radius;
+                }
+                getCircumference() {
+                    return 2 * Math.PI * this.radius;
+                }
+            }
+            
+           
+            class Car {
+                constructor(make, model, year) {
+                    this.make = make;
+                    this.model = model;
+                    this.year = year;
+                }
+                getMake() {
+                    return this.make;
+                }
+                getModel() {
+                    return this.model;
+                }
+                getAge() {
+                    return new Date().getFullYear() - this.year;
+                }
+            }
+
+            
+            class Student {
+                constructor(name, grades) {
+                    this.name = name;
+                    this.grades = grades;
+                }
+                getName() {
+                    return this.name;
+                }
+                getAverageGrade() {
+                    var sum = 0;
+                    for (var i = 0; i < this.grades.length; i++) {
+                        sum += this.grades[i];
+                    }
+                    return sum / this.grades.length;
+                }
+            }
+
+            class Employee {
+                constructor(name, salary, hireDate) {
+                    this.name = name;
+                    this.salary = salary;
+                    this.hireDate = hireDate;
+                }
+                getName() {
+                    return this.name;
+                }
+                getSalary() {
+                    return this.salary;
+                }
+                getHireDate() {
+                    return this.hireDate;
+                }
+            }
+        </script>
+    </body> 
+</html>

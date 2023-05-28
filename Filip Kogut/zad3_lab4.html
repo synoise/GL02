@@ -1,0 +1,32 @@
+<html lang="pl">
+    <body>
+    
+        <h1>Zadanie 3</h1>
+        <script>
+            var data = [];
+
+            const names = ["Jan", "Adam", "Krzysiek", "Zbyszek"]
+            const surnames = ["Kowalski", "Nowak", "Kowal", "Kowalewski", "Nowakowski"]
+
+            for (var i = 0; i < 20; i++) {
+                data.push({
+                    "name": names[Math.floor(Math.random() * names.length)],
+                    "surname": surnames[Math.floor(Math.random() * surnames.length)],
+                    "age": Math.floor(Math.random() * 63 + 18),
+                    "phone": Math.floor(Math.random() * 3000001 + 5000000),
+                })
+            }
+            
+            document.write("<table border='2'>");
+            data.forEach(element => {
+                document.write("<tr>");
+                document.write("<td>" + element.name + "</td>");
+                document.write("<td>" + element.surname + "</td>");
+                document.write("<td>" + element.age + "</td>");
+                document.write("<td>" + element.phone + "</td>");
+                document.write("</tr>");
+            });
+            document.write("</table>");
+        </script>
+    </body> 
+</html>

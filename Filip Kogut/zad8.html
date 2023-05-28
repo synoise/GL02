@@ -1,0 +1,16 @@
+<html lang="pl">
+    <body>
+    
+     <h1>Zadanie 8</h1>
+        <script>
+            var tab = [1, 2, 3, 4, 5, 6];
+            var number = parseInt(prompt("Podaj liczbę całkowitą"));
+            var idx = parseInt(prompt("Podaj indeks"));
+            for (var i = 5; i >= idx; i--) {
+                tab[i + 1] = tab[i];
+            }
+            tab[idx] = number;
+            document.write(tab);
+        </script>
+    </body> 
+</html>
