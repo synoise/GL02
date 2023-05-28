@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="anchor">
+
+    </div>
+    <script>
+        // const tablicaImiona = ["Adam", "Marcin", "Tadeusz", "Wiktor"];
+        // const tablicaNazwiska = ["Kowalski", "Jagiełło", "Nowak", "Bąk"];
+        // let ourInputValue = document.getElementById("inputValue");
+
+        // function filtering() {
+        //     console.log("działa??");
+        // }
+
+
+        // ourInputValue.addEventListener("change", filtering)
+        // function wypelnianie(wynik, wybór = "Nowak") {
+        //     let Container = document.getElementById("anchor");
+        //     console.log(Container);
+        //     for (let j = 0; j < wynik.length; j++) {
+
+        //         let temp = document.createElement("p");
+        //         console.log(wynik[j]);
+        //         temp.innerHTML = wynik[j].name + " " + wynik[j].surname + " " + wynik[j].phone + " " + wynik[j].age;
+
+        //         Container.appendChild(temp);
+        //     }
+
+        // }
+
+        // function daneOsobowe(tablicaName, tablicaLastName, iloscPowtorzen = 20) {
+        //     let tabContainer = [];
+
+        //     for (let i = 0; i < iloscPowtorzen; i++) {
+        //         let randomNumber = (Math.floor(Math.random() * 62 + 18));
+        //         let randomPhoneNumber = (Math.floor(Math.random() * 5000000 + 3000000));
+        //         let tempJSON = { "name": tablicaName[Math.floor(Math.random() * tablicaName.length)], "surname": tablicaLastName[Math.floor(Math.random() * tablicaLastName.length)], "age": randomNumber, "phone": randomPhoneNumber };
+        //         tabContainer.push(tempJSON);
+        //     }
+        //     return tabContainer;
+
+        // }
+        // const ostatecznyWynik = daneOsobowe(tablicaImiona, tablicaNazwiska, 30);
+
+        // //wypelnianie(ostatecznyWynik);
+
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            pole() {
+                return this.width * this.height;
+            }
+            obwód() {
+                return 2 * (this.width + this.height);
+            }
+        }
+        const rect = new Rectangle(4, 5);
+        console.log("Pole prostokąta", rect.pole())
+        console.log("Obwód prostokąta", rect.obwód())
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            speak() {
+                return `The ${this.name} makes a noise.`;
+            }
+        
+        }
+        class Dog extends Animal{
+                speak(){
+                    return "The dog barks";
+                }
+            }
+        const anim = new Animal("Lion");
+        console.log(anim.speak());
+        const dg = new Dog("Dog");
+        console.log(dg.speak());
+
+    </script>
+</body>
+
+</html>
