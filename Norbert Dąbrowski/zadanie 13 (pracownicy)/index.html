@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let database = []
+        class Pracownik {
+            constructor(imie, nazwisko, pensja){
+                this.imie = imie,
+                this.nazwisko = nazwisko,
+                this.pensja = pensja
+            }
+        }
+        class ZarzadzaniePracownikami {
+            dodajPracownika(imie,nazwisko,pensja){
+                database.push(new Pracownik(imie,nazwisko,pensja))
+            }
+            usunPracownika(imie,nazwisko){
+                database = database.filter(pracownik =>{
+                     return
+                      pracownik.imie !== imie && pracownik.nazwisko !== nazwisko; });
+            }
+            pobierzPracownika(){
+                return(
+                    console.log(
+                        `imie ${this.imie}, nazwisko ${this.nazwisko}, pensja ${this.pensja}`
+                    )
+                )
+
+            }
+        }
+        let firma = new ZarzadzaniePracownikami
+        firma.dodajPracownika('Bartłomiej',"kramarz",50000);
+        console.log(database);
+        firma.usunPracownika('Bartłomiej',"kramarz");
+        console.log(database);
+        firma.pobierzPracownika('Bartłomiej',"kramarz");
+    </script>
+</body>
+</html>
