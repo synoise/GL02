@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="anchor">
+    </div>
+    <script>
+  
+    const names = ["Jan", "Anna", "Piotr", "Maria", "Krzysztof", "Małgorzata", "Andrzej", "Agnieszka", "Tomasz", "Barbara"];
+
+   
+    const surnames = ["Nowak", "Kowalski", "Wiśniewski", "Dąbrowski", "Lewandowski", "Wójcik", "Kamiński", "Kowalczyk", "Zieliński", "Szymański"];
+
+    
+    function generateRandomData(numRecords) {
+        const data = [];
+        for (let i = 0; i < numRecords; i++) {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const surname = surnames[Math.floor(Math.random() * surnames.length)];
+            const age = Math.floor(Math.random() * (80 - 18 + 1)) + 18;
+            const phone = Math.floor(Math.random() * (8000000 - 5000000 + 1)) + 5000000;
+
+            const record = { name, surname, age, phone };
+            data.push(record);
+        }
+        return data;
+    }
+
+    
+    const numRecords = 20;
+    const generatedData = generateRandomData(numRecords);
+    console.log(generatedData); -->
+    <script>
+    //     class Rectangle {
+    //         constructor(width, height) {
+    //             this.width = width;
+    //             this.height = height;
+    //     }
+    //     pole() {
+    //         return this.width * this.height; 
+    //     }
+    //     obwod() {
+    //         return 2 * (this.width + this.height);
+    //     }
+    // }
+    // const rect = new Rectangle(4,5);
+    // console.log("Pole prostokąta:", rect.pole());
+    // console.log("Obwód prostokąta:", rect.obwod());
+
+    // class Animal {
+    //     constructor(name) {
+    //         this.name = name;
+    //     }
+
+    //     speak() {
+    //         return `The ${this.name} makes a noise.`;
+    //     }
+    //     }
+
+    //     class Dog extends Animal {
+    //     speak() {
+    //         return "The dog barks.";
+    //     }
+    // }
+
+    
+    // const animal = new Animal("Lion");
+    // console.log(animal.speak());
+
+    // const dog = new Dog("Max");
+    // console.log(dog.speak());
+
+    class BankAccount {
+        constructor(balance) {
+            this.balance = balance;
+        }
+        wplata(amount) {
+            this.balance += amount;
+            return this.balance;
+        }
+        
+        wyplata(amount) {
+            if (amount > 0 && amount <= this.balance) {
+            this.balance -= amount;
+            }
+            return this.balance;
+        }
+        stanKonta() {
+            return this.balance;
+            
+        }
+    }
+    const bank = new BankAccount(1000);
+    
+    console.log(bank.stanKonta());
+    bank.wplata(500);
+    console.log(bank.stanKonta());
+    bank.wyplata(600);
+    console.log(bank.stanKonta());
+
+
+    </script>
+</body>
+</html>
